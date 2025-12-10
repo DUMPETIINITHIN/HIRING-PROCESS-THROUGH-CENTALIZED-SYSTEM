@@ -134,10 +134,8 @@ Open-source project. Free to use.
 
 ---
 
-## 👤 Developed By
-**Nithin Dumpeti**
-
 ---
 
 ## ⭐ Support
 If you found this project helpful, please give it a ⭐ on GitHub 😊
+
