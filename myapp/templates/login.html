@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Process - Login</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#764ba2;
+            padding-bottom: 100px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            padding-top:60px; /* add space because navbar is fixed */
+        }
+
+        /* ---------- TOP NAVBAR ---------- */
+        .top-nav{
+            position:fixed;
+            top:0;
+            width:100%;
+            background:#667eea;
+            padding:12px 0;
+            z-index:100;
+        }
+
+        .top-nav ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:flex;
+            justify-content:center;
+            gap:25px;
+        }
+
+        .top-nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        .top-nav a:hover{
+            text-decoration:underline;
+        }
+
+
+
+        /* ---------- LOGIN BOX ---------- */
+        .login-container{
+            background:white;
+            padding:40px;
+            width:380px;
+            border-radius:12px;
+            text-align:center;
+            box-shadow:0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .login-container h1{
+            font-size:24px;
+            margin-bottom:25px;
+            color:#333;
+        }
+
+        .form-group{
+            margin-bottom:20px;
+            text-align:left;
+        }
+
+        label{
+            font-weight:600;
+            color:#444;
+            display:block;
+            margin-bottom:5px;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            border:1px solid #aaa;
+            border-radius:6px;
+            font-size:14px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#4CAF50;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#45a049;
+        }
+
+        a{
+            color:#007BFF;
+            text-decoration:none;
+        }
+
+        a:hover{
+            text-decoration:underline;
+        }
+
+        .error{
+            color:red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== TOP NAVIGATION ===== -->
+
+    <!-- ===== CENTER LOGIN ===== -->
+    <div class="login-container">
+
+        <h1>Login</h1>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="{% url 'signup' %}">Signup here</a></p>
+        <p><a href="{% url 'dashboard' %}">Continue as Guest</a></p>
+
+    </div>
+
+</body>
+</html>

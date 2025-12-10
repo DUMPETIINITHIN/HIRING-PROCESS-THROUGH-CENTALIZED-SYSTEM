@@ -1,0 +1,26 @@
+/* profile.css - basic styling */
+:root{--accent:#2f7dff;--muted:#777;--bg:#fff}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:#f7f8fb;color:#222;margin:0}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:#fff;border-bottom:1px solid #eee}
+.topbar h1{margin:0;font-size:20px}
+.topbar .back{color:var(--accent);text-decoration:none}
+.container{max-width:980px;margin:24px auto;padding:0 16px}
+.profile-card{display:flex;align-items:center;gap:16px;background:#fff;padding:16px;border-radius:8px;border:1px solid #eee}
+.avatar{width:88px;height:88px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700}
+.profile-info h2{margin:0;font-size:20px}
+.profile-info .muted{margin:4px 0 0;color:var(--muted);font-size:13px}
+.edit-form{margin-top:18px;background:#fff;padding:16px;border-radius:8px;border:1px solid #eee}
+.edit-form h2{margin-top:0}
+.edit-form label{display:block;margin:10px 0;font-size:14px}
+.edit-form input[type="text"], .edit-form input[type="email"], .edit-form input[type="password"]{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff}
+.form-actions{margin-top:12px;display:flex;gap:10px;align-items:center}
+.btn{display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none}
+.btn.primary{background:var(--accent);color:#fff;border:none}
+.btn.link{background:transparent;color:var(--accent);border:none}
+.alert{padding:10px;border-radius:6px;margin-bottom:12px}
+.alert.error{background:#ffecec;color:#900;border:1px solid #f5c2c2}
+.alert.success{background:#e7ffed;color:#0a6b0a;border:1px solid #bfe8c1}
+.recent{margin-top:20px;background:#fff;padding:12px;border-radius:8px;border:1px solid #eee}
+.list{width:100%;border-collapse:collapse}
+.list th,.list td{padding:10px;border-bottom:1px solid #f1f1f1;text-align:left}
+.footer{text-align:center;padding:16px;color:#999}

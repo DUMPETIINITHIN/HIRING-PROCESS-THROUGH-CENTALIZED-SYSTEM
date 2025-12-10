@@ -1,0 +1,107 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Signup Container */
+.signup-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.signup-container h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.form-group select:hover {
+    border-color: #27ae60;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #2ecc71;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.4);
+    background: linear-gradient(135deg, #fff 0%, #f0fff0 100%);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: blue;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: greenyellow;
+}
+
+/* Login Text */
+.login-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-text a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
